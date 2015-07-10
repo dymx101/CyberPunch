@@ -10,12 +10,19 @@
 #import "Defines.h"
 #import "GameLayer.h"
 #import "HudLayer.h"
+#import "SKTTextureCache.h"
 
 @implementation GameScene
 
 - (instancetype)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
-        GameLayer *gameLayer = [GameLayer node]; [self addChild:gameLayer];
+        
+        SKTextureAtlas *atlas = [SKTextureAtlas atlasNamed:@"sprites"];
+        [[SKTTextureCache sharedInstance] addTexturesFromAtlas:atlas filteringMode:SKTextureFilteringNearest];
+        
+        GameLayer *gameLayer = [GameLayer node];
+        [self addChild:gameLayer];
+        
         HudLayer *hudLayer = [HudLayer node];
         [self addChild:hudLayer];
     }

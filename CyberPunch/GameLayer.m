@@ -13,13 +13,23 @@
 
 - (instancetype)init {
     if (self = [super init]) {
-        [self initTileMap:@"map_level1.tmx"]; }
+        [self initTileMap:@"map_level1.tmx"];
+        [self initHero];
+    }
     return self; }
 
 - (void)initTileMap:(NSString *)fileName {
     self.tileMap = [JSTileMap mapNamed:fileName];
     [self.tileMap setScale:kPointFactor];
     [self addChild:self.tileMap];
+}
+
+- (void)initHero {
+    self.hero = [Hero node];
+    [self.hero setScale:kPointFactor];
+    self.hero.position = CGPointMake(100 * kPointFactor, 100 * kPointFactor);
+    [self addChild:self.hero];
+    [self.hero idle];
 }
 
 @end

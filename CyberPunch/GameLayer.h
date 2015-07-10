@@ -8,9 +8,11 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "JSTileMap.h"
+#import "Hero.h"
 
 @interface GameLayer : SKNode
 
 @property (strong, nonatomic) JSTileMap *tileMap;
+@property (strong, nonatomic) Hero *hero;
 
 @end

@@ -38,6 +38,7 @@
 		9562BC011B4CB75E004F666B /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9562BBFE1B4CB75E004F666B /* LICENSE.txt */; };
 		9562BC031B4CB785004F666B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9562BC021B4CB785004F666B /* libz.dylib */; };
 		9562BC071B4CCB03004F666B /* ActionSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BC061B4CCB03004F666B /* ActionSprite.m */; };
+		9562BC0A1B4F46A3004F666B /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BC091B4F46A3004F666B /* Hero.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,8 @@
 		9562BC021B4CB785004F666B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		9562BC051B4CCB03004F666B /* ActionSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSprite.h; sourceTree = "<group>"; };
 		9562BC061B4CCB03004F666B /* ActionSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSprite.m; sourceTree = "<group>"; };
+		9562BC081B4F46A3004F666B /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
+		9562BC091B4F46A3004F666B /* Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hero.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,6 +285,8 @@
 			children = (
 				9562BC051B4CCB03004F666B /* ActionSprite.h */,
 				9562BC061B4CCB03004F666B /* ActionSprite.m */,
+				9562BC081B4F46A3004F666B /* Hero.h */,
+				9562BC091B4F46A3004F666B /* Hero.m */,
 			);
 			name = Characters;
 			sourceTree = "<group>";
@@ -412,6 +417,7 @@
 				9562BBF51B4CB603004F666B /* SKNode+SKTExtras.m in Sources */,
 				9562BC071B4CCB03004F666B /* ActionSprite.m in Sources */,
 				9562BBF71B4CB603004F666B /* SKTTextureCache.m in Sources */,
+				9562BC0A1B4F46A3004F666B /* Hero.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

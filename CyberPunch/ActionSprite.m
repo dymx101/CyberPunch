@@ -7,7 +7,16 @@
 //
 
 #import "ActionSprite.h"
+#import "Defines.h"
+
 
 @implementation ActionSprite
+- (void)idle {
+    if (self.actionState != kActionStateIdle) {
+        [self removeAllActions];
+        [self runAction:self.idleAction]; self.velocity = CGPointZero; self.actionState = kActionStateIdle;
+    }
+}
+
 
 @end

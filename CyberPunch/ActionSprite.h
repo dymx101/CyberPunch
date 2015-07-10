@@ -61,5 +61,54 @@
 
 - (CGRect)feetCollisionRect;
 
+// updates
+- (void)update:(NSTimeInterval)delta;
+
+// action methods
+- (void)idle;
+- (void)attack;
+- (void)hurtWithDamage:(CGFloat)damage force:(CGFloat)force
+             direction:(CGPoint)direction; - (void)knockoutWithDamage:(CGFloat)damage
+             direction:(CGPoint)direction;
+- (void)die;
+- (void)recover;
+- (void)getUp;
+- (void)moveWithDirection:(CGPoint)direction;
+- (void)runWithDirection:(CGPoint)direction;
+- (void)walkWithDirection:(CGPoint)direction;
+- (void)enterFrom:(CGPoint)origin to:(CGPoint)destination;
+- (void)exitFrom:(CGPoint)origin to:(CGPoint)destination;
+
+- (void)jumpRiseWithDirection:(CGPoint)direction;
+- (void)jumpCutoff;
+- (void)jumpFall;
+- (void)jumpLand;
+- (void)jumpAttack;
+- (void)runAttack;
+- (void)reset;
+
+//contact point methods
+- (NSMutableArray *)contactPointArray:(NSUInteger)size;
+- (void)modifyContactPointAtIndex:(const NSUInteger)pointIndex offset:(const CGPoint)offset
+                           radius:(const CGFloat)radius;
+
+- (void)modifyAttackPointAtIndex:(const NSUInteger)pointIndex offset:(const CGPoint)offset
+                          radius:(const CGFloat)radius;
+
+- (void)modifyPoint:(ContactPoint *)point offset:(const CGPoint)offset
+             radius:(const CGFloat)radius;
+
+- (ContactPoint)contactPointWithOffset:(const CGPoint)offset
+                                radius:(const CGFloat)radius;
+
+- (void)setContactPointsForAction:(ActionState)actionState;
+
+// factory methods
+- (NSMutableArray *)texturesWithPrefix:(NSString *)prefix startFrameIdx:(NSInteger)startFrameIdx
+                            frameCount:(NSInteger)frameCount;
+- (SKAction *)animateActionForGroup:(NSMutableArray *)group timePerFrame:(NSTimeInterval)timeInterval
+                         frameCount:(NSInteger)frameCount;
+- (SKAction *)animateActionForTextures:(NSMutableArray *)textures
+                          timePerFrame:(NSTimeInterval)timeInterval;
 
 @end
