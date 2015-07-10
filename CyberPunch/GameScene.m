@@ -7,8 +7,20 @@
 //
 
 #import "GameScene.h"
+#import "Defines.h"
+#import "GameLayer.h"
+#import "HudLayer.h"
 
 @implementation GameScene
+
+- (instancetype)initWithSize:(CGSize)size {
+    if (self = [super initWithSize:size]) {
+        GameLayer *gameLayer = [GameLayer node]; [self addChild:gameLayer];
+        HudLayer *hudLayer = [HudLayer node];
+        [self addChild:hudLayer];
+    }
+    return self;
+}
 
 -(void)didMoveToView:(SKView *)view {
     /* Setup your scene here */

@@ -8,6 +8,8 @@
 
 #import "GameViewController.h"
 #import "GameScene.h"
+#import "TitleScene.h"
+#import "Defines.h"
 
 @implementation SKScene (Unarchive)
 
@@ -34,6 +36,16 @@
 {
     [super viewDidLoad];
 
+}
+
+-(void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews]; SKView *skView = (SKView *)self.view;
+    if (!skView.scene) {
+        skView.showsFPS = YES;
+        skView.showsNodeCount = YES;
+        skView.showsDrawCount = YES;
+        SKScene *titleScene = [TitleScene sceneWithSize:skView.bounds.size];
+        [skView presentScene:titleScene]; }
 }
 
 - (BOOL)shouldAutorotate

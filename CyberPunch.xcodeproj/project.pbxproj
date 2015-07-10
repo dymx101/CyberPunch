@@ -16,6 +16,28 @@
 		9562BBAC1B49C8D3004F666B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9562BBAB1B49C8D3004F666B /* Images.xcassets */; };
 		9562BBAF1B49C8D3004F666B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9562BBAD1B49C8D3004F666B /* LaunchScreen.xib */; };
 		9562BBBB1B49C8D3004F666B /* CyberPunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BBBA1B49C8D3004F666B /* CyberPunchTests.m */; };
+		9562BBCF1B49CC5D004F666B /* bg_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 9562BBC61B49CC5D004F666B /* bg_title.png */; };
+		9562BBD01B49CC5D004F666B /* joypad.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 9562BBC71B49CC5D004F666B /* joypad.atlas */; };
+		9562BBD11B49CC5D004F666B /* map_level1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 9562BBC81B49CC5D004F666B /* map_level1.tmx */; };
+		9562BBD21B49CC5D004F666B /* sprites.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9562BBCA1B49CC5D004F666B /* sprites.plist */; };
+		9562BBD31B49CC5D004F666B /* sprites.png in Resources */ = {isa = PBXBuildFile; fileRef = 9562BBCB1B49CC5D004F666B /* sprites.png */; };
+		9562BBD41B49CC5D004F666B /* tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 9562BBCC1B49CC5D004F666B /* tiles.png */; };
+		9562BBD61B49CC5D004F666B /* txt_touchtostart.png in Resources */ = {isa = PBXBuildFile; fileRef = 9562BBCE1B49CC5D004F666B /* txt_touchtostart.png */; };
+		9562BBD81B49CEB4004F666B /* txt_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 9562BBD71B49CEB4004F666B /* txt_title.png */; };
+		9562BBDC1B49CF74004F666B /* TitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BBDB1B49CF74004F666B /* TitleScene.m */; };
+		9562BBE21B4CB51A004F666B /* GameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BBE11B4CB51A004F666B /* GameLayer.m */; };
+		9562BBE51B4CB531004F666B /* HudLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BBE41B4CB531004F666B /* HudLayer.m */; };
+		9562BBF31B4CB603004F666B /* SKAction+SKTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BBE81B4CB603004F666B /* SKAction+SKTExtras.m */; };
+		9562BBF41B4CB603004F666B /* SKEmitterNode+SKTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BBEA1B4CB603004F666B /* SKEmitterNode+SKTExtras.m */; };
+		9562BBF51B4CB603004F666B /* SKNode+SKTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BBEC1B4CB603004F666B /* SKNode+SKTExtras.m */; };
+		9562BBF61B4CB603004F666B /* SKTAudio.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BBEE1B4CB603004F666B /* SKTAudio.m */; };
+		9562BBF71B4CB603004F666B /* SKTTextureCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BBF01B4CB603004F666B /* SKTTextureCache.m */; };
+		9562BBF81B4CB603004F666B /* SKTUtils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9562BBF21B4CB603004F666B /* SKTUtils.mm */; };
+		9562BBFF1B4CB75E004F666B /* JSTileMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BBFB1B4CB75E004F666B /* JSTileMap.m */; };
+		9562BC001B4CB75E004F666B /* LFCGzipUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BBFD1B4CB75E004F666B /* LFCGzipUtility.m */; };
+		9562BC011B4CB75E004F666B /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9562BBFE1B4CB75E004F666B /* LICENSE.txt */; };
+		9562BC031B4CB785004F666B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9562BC021B4CB785004F666B /* libz.dylib */; };
+		9562BC071B4CCB03004F666B /* ActionSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BC061B4CCB03004F666B /* ActionSprite.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +67,42 @@
 		9562BBB41B49C8D3004F666B /* CyberPunchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyberPunchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9562BBB91B49C8D3004F666B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9562BBBA1B49C8D3004F666B /* CyberPunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CyberPunchTests.m; sourceTree = "<group>"; };
+		9562BBC61B49CC5D004F666B /* bg_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_title.png; sourceTree = "<group>"; };
+		9562BBC71B49CC5D004F666B /* joypad.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = joypad.atlas; sourceTree = "<group>"; };
+		9562BBC81B49CC5D004F666B /* map_level1.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = map_level1.tmx; sourceTree = "<group>"; };
+		9562BBCA1B49CC5D004F666B /* sprites.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = sprites.plist; sourceTree = "<group>"; };
+		9562BBCB1B49CC5D004F666B /* sprites.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sprites.png; sourceTree = "<group>"; };
+		9562BBCC1B49CC5D004F666B /* tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tiles.png; sourceTree = "<group>"; };
+		9562BBCE1B49CC5D004F666B /* txt_touchtostart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = txt_touchtostart.png; sourceTree = "<group>"; };
+		9562BBD71B49CEB4004F666B /* txt_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = txt_title.png; sourceTree = "<group>"; };
+		9562BBDA1B49CF74004F666B /* TitleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleScene.h; sourceTree = "<group>"; };
+		9562BBDB1B49CF74004F666B /* TitleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleScene.m; sourceTree = "<group>"; };
+		9562BBDD1B4A39A6004F666B /* Defines.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Defines.c; sourceTree = "<group>"; };
+		9562BBDE1B4A39A6004F666B /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		9562BBE01B4CB51A004F666B /* GameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameLayer.h; sourceTree = "<group>"; };
+		9562BBE11B4CB51A004F666B /* GameLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameLayer.m; sourceTree = "<group>"; };
+		9562BBE31B4CB531004F666B /* HudLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HudLayer.h; sourceTree = "<group>"; };
+		9562BBE41B4CB531004F666B /* HudLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HudLayer.m; sourceTree = "<group>"; };
+		9562BBE71B4CB603004F666B /* SKAction+SKTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKAction+SKTExtras.h"; sourceTree = "<group>"; };
+		9562BBE81B4CB603004F666B /* SKAction+SKTExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKAction+SKTExtras.m"; sourceTree = "<group>"; };
+		9562BBE91B4CB603004F666B /* SKEmitterNode+SKTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKEmitterNode+SKTExtras.h"; sourceTree = "<group>"; };
+		9562BBEA1B4CB603004F666B /* SKEmitterNode+SKTExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKEmitterNode+SKTExtras.m"; sourceTree = "<group>"; };
+		9562BBEB1B4CB603004F666B /* SKNode+SKTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SKNode+SKTExtras.h"; sourceTree = "<group>"; };
+		9562BBEC1B4CB603004F666B /* SKNode+SKTExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SKNode+SKTExtras.m"; sourceTree = "<group>"; };
+		9562BBED1B4CB603004F666B /* SKTAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTAudio.h; sourceTree = "<group>"; };
+		9562BBEE1B4CB603004F666B /* SKTAudio.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTAudio.m; sourceTree = "<group>"; };
+		9562BBEF1B4CB603004F666B /* SKTTextureCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTTextureCache.h; sourceTree = "<group>"; };
+		9562BBF01B4CB603004F666B /* SKTTextureCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTTextureCache.m; sourceTree = "<group>"; };
+		9562BBF11B4CB603004F666B /* SKTUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTUtils.h; sourceTree = "<group>"; };
+		9562BBF21B4CB603004F666B /* SKTUtils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = SKTUtils.mm; sourceTree = "<group>"; };
+		9562BBFA1B4CB75E004F666B /* JSTileMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSTileMap.h; sourceTree = "<group>"; };
+		9562BBFB1B4CB75E004F666B /* JSTileMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSTileMap.m; sourceTree = "<group>"; };
+		9562BBFC1B4CB75E004F666B /* LFCGzipUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LFCGzipUtility.h; sourceTree = "<group>"; };
+		9562BBFD1B4CB75E004F666B /* LFCGzipUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LFCGzipUtility.m; sourceTree = "<group>"; };
+		9562BBFE1B4CB75E004F666B /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		9562BC021B4CB785004F666B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		9562BC051B4CCB03004F666B /* ActionSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSprite.h; sourceTree = "<group>"; };
+		9562BC061B4CCB03004F666B /* ActionSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSprite.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9562BC031B4CB785004F666B /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +127,7 @@
 		9562BB8D1B49C8D3004F666B = {
 			isa = PBXGroup;
 			children = (
+				9562BC021B4CB785004F666B /* libz.dylib */,
 				9562BB981B49C8D3004F666B /* CyberPunch */,
 				9562BBB71B49C8D3004F666B /* CyberPunchTests */,
 				9562BB971B49C8D3004F666B /* Products */,
@@ -86,16 +146,20 @@
 		9562BB981B49C8D3004F666B /* CyberPunch */ = {
 			isa = PBXGroup;
 			children = (
+				9562BC041B4CCAD6004F666B /* Characters */,
+				9562BBDF1B4CB4CC004F666B /* Game */,
+				9562BBD91B49CF49004F666B /* Menus */,
+				9562BBC41B49CC32004F666B /* Resources */,
 				9562BB9D1B49C8D3004F666B /* AppDelegate.h */,
 				9562BB9E1B49C8D3004F666B /* AppDelegate.m */,
-				9562BBA01B49C8D3004F666B /* GameScene.h */,
-				9562BBA11B49C8D3004F666B /* GameScene.m */,
 				9562BBA31B49C8D3004F666B /* GameScene.sks */,
 				9562BBA51B49C8D3004F666B /* GameViewController.h */,
 				9562BBA61B49C8D3004F666B /* GameViewController.m */,
 				9562BBA81B49C8D3004F666B /* Main.storyboard */,
 				9562BBAB1B49C8D3004F666B /* Images.xcassets */,
 				9562BBAD1B49C8D3004F666B /* LaunchScreen.xib */,
+				9562BBE61B4CB603004F666B /* SKTUtils */,
+				9562BBF91B4CB75E004F666B /* JSTileMap */,
 				9562BB991B49C8D3004F666B /* Supporting Files */,
 			);
 			path = CyberPunch;
@@ -106,6 +170,8 @@
 			children = (
 				9562BB9A1B49C8D3004F666B /* Info.plist */,
 				9562BB9B1B49C8D3004F666B /* main.m */,
+				9562BBDD1B4A39A6004F666B /* Defines.c */,
+				9562BBDE1B4A39A6004F666B /* Defines.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -125,6 +191,99 @@
 				9562BBB91B49C8D3004F666B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9562BBC41B49CC32004F666B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9562BBC51B49CC5D004F666B /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9562BBC51B49CC5D004F666B /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				9562BBD71B49CEB4004F666B /* txt_title.png */,
+				9562BBC61B49CC5D004F666B /* bg_title.png */,
+				9562BBC71B49CC5D004F666B /* joypad.atlas */,
+				9562BBC81B49CC5D004F666B /* map_level1.tmx */,
+				9562BBC91B49CC5D004F666B /* sprites.atlasc */,
+				9562BBCC1B49CC5D004F666B /* tiles.png */,
+				9562BBCE1B49CC5D004F666B /* txt_touchtostart.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		9562BBC91B49CC5D004F666B /* sprites.atlasc */ = {
+			isa = PBXGroup;
+			children = (
+				9562BBCA1B49CC5D004F666B /* sprites.plist */,
+				9562BBCB1B49CC5D004F666B /* sprites.png */,
+			);
+			path = sprites.atlasc;
+			sourceTree = "<group>";
+		};
+		9562BBD91B49CF49004F666B /* Menus */ = {
+			isa = PBXGroup;
+			children = (
+				9562BBDA1B49CF74004F666B /* TitleScene.h */,
+				9562BBDB1B49CF74004F666B /* TitleScene.m */,
+			);
+			name = Menus;
+			sourceTree = "<group>";
+		};
+		9562BBDF1B4CB4CC004F666B /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				9562BBA01B49C8D3004F666B /* GameScene.h */,
+				9562BBA11B49C8D3004F666B /* GameScene.m */,
+				9562BBE01B4CB51A004F666B /* GameLayer.h */,
+				9562BBE11B4CB51A004F666B /* GameLayer.m */,
+				9562BBE31B4CB531004F666B /* HudLayer.h */,
+				9562BBE41B4CB531004F666B /* HudLayer.m */,
+			);
+			name = Game;
+			sourceTree = "<group>";
+		};
+		9562BBE61B4CB603004F666B /* SKTUtils */ = {
+			isa = PBXGroup;
+			children = (
+				9562BBE71B4CB603004F666B /* SKAction+SKTExtras.h */,
+				9562BBE81B4CB603004F666B /* SKAction+SKTExtras.m */,
+				9562BBE91B4CB603004F666B /* SKEmitterNode+SKTExtras.h */,
+				9562BBEA1B4CB603004F666B /* SKEmitterNode+SKTExtras.m */,
+				9562BBEB1B4CB603004F666B /* SKNode+SKTExtras.h */,
+				9562BBEC1B4CB603004F666B /* SKNode+SKTExtras.m */,
+				9562BBED1B4CB603004F666B /* SKTAudio.h */,
+				9562BBEE1B4CB603004F666B /* SKTAudio.m */,
+				9562BBEF1B4CB603004F666B /* SKTTextureCache.h */,
+				9562BBF01B4CB603004F666B /* SKTTextureCache.m */,
+				9562BBF11B4CB603004F666B /* SKTUtils.h */,
+				9562BBF21B4CB603004F666B /* SKTUtils.mm */,
+			);
+			path = SKTUtils;
+			sourceTree = "<group>";
+		};
+		9562BBF91B4CB75E004F666B /* JSTileMap */ = {
+			isa = PBXGroup;
+			children = (
+				9562BBFA1B4CB75E004F666B /* JSTileMap.h */,
+				9562BBFB1B4CB75E004F666B /* JSTileMap.m */,
+				9562BBFC1B4CB75E004F666B /* LFCGzipUtility.h */,
+				9562BBFD1B4CB75E004F666B /* LFCGzipUtility.m */,
+				9562BBFE1B4CB75E004F666B /* LICENSE.txt */,
+			);
+			path = JSTileMap;
+			sourceTree = "<group>";
+		};
+		9562BC041B4CCAD6004F666B /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				9562BC051B4CCB03004F666B /* ActionSprite.h */,
+				9562BC061B4CCB03004F666B /* ActionSprite.m */,
+			);
+			name = Characters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,10 +366,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9562BBD01B49CC5D004F666B /* joypad.atlas in Resources */,
+				9562BBD41B49CC5D004F666B /* tiles.png in Resources */,
+				9562BBD31B49CC5D004F666B /* sprites.png in Resources */,
+				9562BBD21B49CC5D004F666B /* sprites.plist in Resources */,
 				9562BBAF1B49C8D3004F666B /* LaunchScreen.xib in Resources */,
+				9562BC011B4CB75E004F666B /* LICENSE.txt in Resources */,
+				9562BBD61B49CC5D004F666B /* txt_touchtostart.png in Resources */,
+				9562BBD11B49CC5D004F666B /* map_level1.tmx in Resources */,
 				9562BBAC1B49C8D3004F666B /* Images.xcassets in Resources */,
 				9562BBA41B49C8D3004F666B /* GameScene.sks in Resources */,
+				9562BBD81B49CEB4004F666B /* txt_title.png in Resources */,
 				9562BBAA1B49C8D3004F666B /* Main.storyboard in Resources */,
+				9562BBCF1B49CC5D004F666B /* bg_title.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,10 +396,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9562BBDC1B49CF74004F666B /* TitleScene.m in Sources */,
+				9562BC001B4CB75E004F666B /* LFCGzipUtility.m in Sources */,
+				9562BBE21B4CB51A004F666B /* GameLayer.m in Sources */,
+				9562BBF41B4CB603004F666B /* SKEmitterNode+SKTExtras.m in Sources */,
+				9562BBFF1B4CB75E004F666B /* JSTileMap.m in Sources */,
 				9562BBA71B49C8D3004F666B /* GameViewController.m in Sources */,
+				9562BBE51B4CB531004F666B /* HudLayer.m in Sources */,
+				9562BBF81B4CB603004F666B /* SKTUtils.mm in Sources */,
 				9562BB9F1B49C8D3004F666B /* AppDelegate.m in Sources */,
 				9562BBA21B49C8D3004F666B /* GameScene.m in Sources */,
+				9562BBF61B4CB603004F666B /* SKTAudio.m in Sources */,
 				9562BB9C1B49C8D3004F666B /* main.m in Sources */,
+				9562BBF31B4CB603004F666B /* SKAction+SKTExtras.m in Sources */,
+				9562BBF51B4CB603004F666B /* SKNode+SKTExtras.m in Sources */,
+				9562BC071B4CCB03004F666B /* ActionSprite.m in Sources */,
+				9562BBF71B4CB603004F666B /* SKTTextureCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
