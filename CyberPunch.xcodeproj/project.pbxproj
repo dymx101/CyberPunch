@@ -39,6 +39,7 @@
 		9562BC031B4CB785004F666B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9562BC021B4CB785004F666B /* libz.dylib */; };
 		9562BC071B4CCB03004F666B /* ActionSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BC061B4CCB03004F666B /* ActionSprite.m */; };
 		9562BC0A1B4F46A3004F666B /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BC091B4F46A3004F666B /* Hero.m */; };
+		9562BC0E1B4F5E34004F666B /* ActionDPad.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BC0D1B4F5E34004F666B /* ActionDPad.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,8 @@
 		9562BC061B4CCB03004F666B /* ActionSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSprite.m; sourceTree = "<group>"; };
 		9562BC081B4F46A3004F666B /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
 		9562BC091B4F46A3004F666B /* Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hero.m; sourceTree = "<group>"; };
+		9562BC0C1B4F5E34004F666B /* ActionDPad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionDPad.h; sourceTree = "<group>"; };
+		9562BC0D1B4F5E34004F666B /* ActionDPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionDPad.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,7 @@
 		9562BB981B49C8D3004F666B /* CyberPunch */ = {
 			isa = PBXGroup;
 			children = (
+				9562BC0B1B4F5E11004F666B /* Controls */,
 				9562BC041B4CCAD6004F666B /* Characters */,
 				9562BBDF1B4CB4CC004F666B /* Game */,
 				9562BBD91B49CF49004F666B /* Menus */,
@@ -291,6 +295,15 @@
 			name = Characters;
 			sourceTree = "<group>";
 		};
+		9562BC0B1B4F5E11004F666B /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				9562BC0C1B4F5E34004F666B /* ActionDPad.h */,
+				9562BC0D1B4F5E34004F666B /* ActionDPad.m */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -405,6 +418,7 @@
 				9562BC001B4CB75E004F666B /* LFCGzipUtility.m in Sources */,
 				9562BBE21B4CB51A004F666B /* GameLayer.m in Sources */,
 				9562BBF41B4CB603004F666B /* SKEmitterNode+SKTExtras.m in Sources */,
+				9562BC0E1B4F5E34004F666B /* ActionDPad.m in Sources */,
 				9562BBFF1B4CB75E004F666B /* JSTileMap.m in Sources */,
 				9562BBA71B49C8D3004F666B /* GameViewController.m in Sources */,
 				9562BBE51B4CB531004F666B /* HudLayer.m in Sources */,
@@ -546,6 +560,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CyberPunch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -556,6 +571,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CyberPunch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

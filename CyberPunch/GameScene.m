@@ -25,6 +25,13 @@
         
         HudLayer *hudLayer = [HudLayer node];
         [self addChild:hudLayer];
+        
+        [[SKTTextureCache sharedInstance] setEnableFallbackSuffixes:YES];
+        atlas = [SKTextureAtlas atlasNamed:@"joypad"];
+        
+        [[SKTTextureCache sharedInstance]
+         
+         addTexturesFromAtlas:atlas filteringMode:SKTextureFilteringLinear];
     }
     return self;
 }

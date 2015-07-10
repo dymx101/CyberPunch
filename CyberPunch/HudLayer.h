@@ -7,7 +7,10 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "ActionDPad.h"
 
 @interface HudLayer : SKNode
 
+@property (strong, nonatomic) ActionDPad *dPad;
+- (void)update:(NSTimeInterval)delta;
 @end
