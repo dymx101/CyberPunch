@@ -21,9 +21,7 @@
 
 @end
 
-
 @implementation ActionDPad
-
 
 + (instancetype)dPadWithPrefix:(NSString *)filePrefix
                         radius:(CGFloat)radius
@@ -181,5 +179,6 @@
              didChangeDirectionTo:self.direction];
     }
 }
+
 
 @end

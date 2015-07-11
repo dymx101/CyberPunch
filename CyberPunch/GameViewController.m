@@ -11,41 +11,11 @@
 #import "TitleScene.h"
 #import "Defines.h"
 
-@implementation SKScene (Unarchive)
-
-+ (instancetype)unarchiveFromFile:(NSString *)file {
-    /* Retrieve scene file path from the application bundle */
-    NSString *nodePath = [[NSBundle mainBundle] pathForResource:file ofType:@"sks"];
-    /* Unarchive the file to an SKScene object */
-    NSData *data = [NSData dataWithContentsOfFile:nodePath
-                                          options:NSDataReadingMappedIfSafe
-                                            error:nil];
-    NSKeyedUnarchiver *arch = [[NSKeyedUnarchiver alloc] initForReadingWithData:data];
-    [arch setClass:self forClassName:@"SKScene"];
-    SKScene *scene = [arch decodeObjectForKey:NSKeyedArchiveRootObjectKey];
-    [arch finishDecoding];
-    
-    return scene;
-}
-
-@end
-
 @implementation GameViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-}
-
--(void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews]; SKView *skView = (SKView *)self.view;
-    if (!skView.scene) {
-        skView.showsFPS = YES;
-        skView.showsNodeCount = YES;
-        skView.showsDrawCount = YES;
-        SKScene *titleScene = [TitleScene sceneWithSize:skView.bounds.size];
-        [skView presentScene:titleScene]; }
 }
 
 - (BOOL)shouldAutorotate
@@ -68,8 +38,30 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
-- (BOOL)prefersStatusBarHidden {
+- (BOOL)prefersStatusBarHidden
+{
     return YES;
+}
+
+//1
+-(void)viewWillLayoutSubviews
+{
+    [super viewWillLayoutSubviews];
+    
+    SKView *skView = (SKView *)self.view;
+    
+    //2
+    if (!skView.scene)
+    {
+        skView.showsFPS = YES;
+        skView.showsNodeCount = YES;
+        //3
+        skView.showsDrawCount = YES;
+        
+        //4
+        SKScene *titleScene = [TitleScene sceneWithSize:skView.bounds.size];
+        [skView presentScene:titleScene];
+    }
 }
 
 @end

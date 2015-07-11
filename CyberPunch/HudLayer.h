@@ -13,4 +13,6 @@
 
 @property (strong, nonatomic) ActionDPad *dPad;
 - (void)update:(NSTimeInterval)delta;
+
 @end
+

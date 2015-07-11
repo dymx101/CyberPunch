@@ -8,6 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 #import "Defines.h"
+#import "SKTUtils.h"
 
 typedef NS_ENUM(NSInteger, ActionDPadDirection) {
     kActionDPadDirectionCenter = 0,
