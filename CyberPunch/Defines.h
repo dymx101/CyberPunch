@@ -20,11 +20,33 @@
 #define CURTIME CACurrentMediaTime()
 #define kPointFactor (IS_IPAD() ? 2.0 : 1.0)
 
-typedef NS_ENUM(NSInteger, ActionState) { kActionStateNone = 0, kActionStateIdle,
-    kActionStateAttack, kActionStateAttackTwo, kActionStateAttackThree, kActionStateWalk,
-    kActionStateRun, kActionStateRunAttack, kActionStateJumpRise, kActionStateJumpFall, kActionStateJumpLand, kActionStateJumpAttack, kActionStateHurt, kActionStateKnockedOut, kActionStateRecover, kActionStateDead, kActionStateAutomated,
+typedef NS_ENUM(NSInteger, ActionState) {
+    kActionStateNone = 0,
+    kActionStateIdle,
+    kActionStateAttack,
+    kActionStateAttackTwo,
+    kActionStateAttackThree,
+    kActionStateWalk,
+    kActionStateRun,
+    kActionStateRunAttack,
+    kActionStateJumpRise,
+    kActionStateJumpFall,
+    kActionStateJumpLand,
+    kActionStateJumpAttack,
+    kActionStateHurt,
+    kActionStateKnockedOut,
+    kActionStateRecover,
+    kActionStateDead,
+    kActionStateAutomated,
 };
-typedef struct _ContactPoint {
-    CGPoint position; CGPoint offset; CGFloat radius;
+
+typedef struct _ContactPoint
+{
+    CGPoint position;
+    CGPoint offset;
+    CGFloat radius;
 } ContactPoint;
-#endif /* defined(__CyberPunch__Defines__) */
+
+#endif
+
+/* defined(__CyberPunch__Defines__) */

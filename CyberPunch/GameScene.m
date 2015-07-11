@@ -44,7 +44,7 @@
          filteringMode:SKTextureFilteringLinear];
         
         _gameLayer = [GameLayer node];
-//        [self addChild:_gameLayer];
+        [self addChild:_gameLayer];
         
         _hudLayer = [HudLayer node];
         [self addChild:_hudLayer];

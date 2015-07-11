@@ -7,6 +7,9 @@
 //
 
 #import "SKTTextureCache.h"
+#import "Defines.h"
+
+
 @import SpriteKit;
 
 @interface SKTTextureCache()
@@ -91,29 +94,29 @@
     
     [_textureCache addEntriesFromDictionary:iPhoneSDTextures];
     
-//    if (IS_RETINA())
-//    {
-//        [_textureCache addEntriesFromDictionary:iPhoneHDTextures];
-//    }
-//    
-//    if (IS_IPAD())
-//    {
-//        if (_enableFallbackSuffixes)
-//        {
-//            [_textureCache addEntriesFromDictionary:iPhoneHDTextures];
-//        }
-//        [_textureCache addEntriesFromDictionary:iPadSDTextures];
-//    }
+    if (IS_RETINA())
+    {
+        [_textureCache addEntriesFromDictionary:iPhoneHDTextures];
+    }
     
-//    if (IS_IPAD() && IS_RETINA())
-//    {
-//        if (_enableFallbackSuffixes)
-//        {
-//            [_textureCache addEntriesFromDictionary:iPhoneHDTextures];
-//            [_textureCache addEntriesFromDictionary:iPadSDTextures];
-//        }
-//        [_textureCache addEntriesFromDictionary:iPadHDTextures];
-//    }
+    if (IS_IPAD())
+    {
+        if (_enableFallbackSuffixes)
+        {
+            [_textureCache addEntriesFromDictionary:iPhoneHDTextures];
+        }
+        [_textureCache addEntriesFromDictionary:iPadSDTextures];
+    }
+    
+    if (IS_IPAD() && IS_RETINA())
+    {
+        if (_enableFallbackSuffixes)
+        {
+            [_textureCache addEntriesFromDictionary:iPhoneHDTextures];
+            [_textureCache addEntriesFromDictionary:iPadSDTextures];
+        }
+        [_textureCache addEntriesFromDictionary:iPadHDTextures];
+    }
     
 }
 
