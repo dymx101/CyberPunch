@@ -51,6 +51,9 @@
         
         _hudLayer.dPad.delegate = _gameLayer;
         _gameLayer.hud = _hudLayer;
+        
+        _hudLayer.buttonA.delegate = _gameLayer;
+        _hudLayer.buttonB.delegate = _gameLayer;
     }
     return self;
 }

@@ -10,6 +10,13 @@
 #import "Defines.h"
 #import "SKTUtils.h"
 
+@interface GameLayer ()
+
+@property (assign, nonatomic) CGFloat runDelay;
+@property (assign, nonatomic) ActionDPadDirection previousDirection;
+
+@end
+
 
 @implementation GameLayer
 
@@ -42,11 +49,21 @@
     [self addChild:self.tileMap];
 }
 
-- (void)actionDPad:(ActionDPad *)actionDPad
-didChangeDirectionTo:(ActionDPadDirection)direction
-{
+- (void)actionDPad:(ActionDPad *)actionDPad didChangeDirectionTo:(ActionDPadDirection)direction {
     CGPoint directionVector = [self vectorForDirection:direction];
-    [self.hero walkWithDirection:directionVector];
+    
+    if (self.runDelay > 0 && self.previousDirection == direction && (direction == kActionDPadDirectionRight ||
+                                                                     direction == kActionDPadDirectionLeft))
+    {
+        [self.hero runWithDirection:directionVector];
+    }
+    
+    else if (self.hero.actionState == kActionStateRun && abs(self.previousDirection - direction) <= 1) {
+        [self.hero moveWithDirection:directionVector];
+    }
+    else {
+        [self.hero walkWithDirection:directionVector]; self.previousDirection = direction; self.runDelay = 0.2;
+    }
 }
 
 - (void)actionDPad:(ActionDPad *)actionDPad
@@ -63,6 +80,13 @@ isHoldingDirection:(ActionDPadDirection)direction
         [self.hero idle];
     }
 }
+
+#pragma mark - ActionButtonDelegate methods
+- (void)actionButtonWasPressed:(ActionButton *)actionButton {
+    if ([actionButton.name isEqualToString:@"ButtonA"]) { [self.hero attack];
+    } }
+- (void)actionButtonIsHeld:(ActionButton *)actionButton{ }
+- (void)actionButtonWasReleased:(ActionButton *)actionButton{ }
 
 - (CGPoint)vectorForDirection:(ActionDPadDirection)direction
 {
@@ -107,6 +131,11 @@ isHoldingDirection:(ActionDPadDirection)direction
 {
     [_hero update:delta];
     [self updatePositions];
+    
+    if (self.runDelay > 0) {
+        self.runDelay -= delta;
+    }
+    
     [self setViewpointCenter:self.hero.position];
 }
 

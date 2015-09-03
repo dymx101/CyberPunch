@@ -12,7 +12,7 @@
 #import "HudLayer.h"
 
 
-@interface GameLayer : SKNode <ActionDPadDelegate>
+@interface GameLayer : SKNode <ActionDPadDelegate, ActionButtonDelegate>
 
 @property (strong, nonatomic) JSTileMap *tileMap;
 @property (strong, nonatomic) Hero *hero;

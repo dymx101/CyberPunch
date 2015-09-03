@@ -24,6 +24,33 @@
         _dPad.position = CGPointMake(radius, radius);
         _dPad.alpha = 0.5;
         [self addChild:_dPad];
+        
+        CGFloat buttonRadius = radius / 2.0;
+        CGFloat padding = 8.0 * kPointFactor;
+        
+        _buttonB = [ActionButton buttonWithPrefix:@"button_b"
+                                           radius:buttonRadius];
+        
+        _buttonB.position =
+        CGPointMake(SCREEN.width - buttonRadius - padding,
+                    buttonRadius * 2 + padding);
+        
+        _buttonB.alpha = 0.5;
+        _buttonB.name = @"ButtonB";
+        [self addChild:_buttonB];
+        
+        _buttonA =
+        [ActionButton buttonWithPrefix:@"button_a"
+                                radius:buttonRadius];
+        
+        _buttonA.position =
+        CGPointMake(_buttonB.position.x - radius - padding,
+                    buttonRadius + padding);
+        
+        _buttonA.alpha = 0.5;
+        _buttonA.name = @"ButtonA";
+        [self addChild:_buttonA];
+        
     }
     
     return self;

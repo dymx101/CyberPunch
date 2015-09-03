@@ -46,6 +46,19 @@
         self.walkSpeed = 80 * kPointFactor;
         self.directionX = 1.0;
         
+        //run animation
+        textures = [self texturesWithPrefix:@"hero_run"
+                              startFrameIdx:0 frameCount:8];
+        SKAction *runAnimation = [SKAction animateWithTextures:textures timePerFrame:1.0/12.0];
+        self.runAction = [SKAction repeatActionForever:runAnimation];
+        self.runSpeed = 160 * kPointFactor;
+        
+        textures = [self texturesWithPrefix:@"hero_attack_00" startFrameIdx:0
+                                 frameCount:3];
+        SKAction *attackAnimation = [SKAction animateWithTextures:textures timePerFrame:1.0/15.0];
+        self.attackAction = [SKAction sequence:@[attackAnimation, [SKAction
+                                               performSelector:@selector(idle) onTarget:self]]];
+        
         self.centerToBottom = 39.0 * kPointFactor;
         self.centerToSides = 29.0 * kPointFactor;
         

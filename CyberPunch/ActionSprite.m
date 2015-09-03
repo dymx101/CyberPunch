@@ -97,7 +97,8 @@
 
 - (void)update:(NSTimeInterval)delta
 {
-    if (self.actionState == kActionStateWalk) {
+    if (self.actionState == kActionStateWalk ||
+        self.actionState == kActionStateRun) {
         CGPoint point = CGPointMultiplyScalar(self.velocity, delta);
         self.desiredPosition = CGPointAdd(self.position, point);
     }
@@ -113,6 +114,25 @@
     
     return CGRectInset(feetRect, 15.0 * kPointFactor, 0);
 }
+
+- (void)runWithDirection:(CGPoint)direction
+{
+    if (self.actionState == kActionStateIdle ||
+        self.actionState == kActionStateWalk) {
+        
+        [self removeAllActions];
+        [self runAction:self.runAction];
+        self.actionState = kActionStateRun;
+        [self moveWithDirection:direction];
+    }
+}
+
+- (void)attack {
+    if (self.actionState == kActionStateIdle || self.actionState == kActionStateWalk || self.actionState == kActionStateAttack) {
+        [self removeAllActions];
+        [self runAction:self.attackAction];
+        self.actionState = kActionStateAttack;
+    } }
 
 
 @end

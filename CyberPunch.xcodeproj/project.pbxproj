@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9506404B1B5192F90066AC5D /* ActionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 9506404A1B5192F90066AC5D /* ActionButton.m */; };
 		9562BB9C1B49C8D3004F666B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BB9B1B49C8D3004F666B /* main.m */; };
 		9562BB9F1B49C8D3004F666B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BB9E1B49C8D3004F666B /* AppDelegate.m */; };
 		9562BBA21B49C8D3004F666B /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 9562BBA11B49C8D3004F666B /* GameScene.m */; };
@@ -52,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		950640491B5192F90066AC5D /* ActionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionButton.h; sourceTree = "<group>"; };
+		9506404A1B5192F90066AC5D /* ActionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionButton.m; sourceTree = "<group>"; };
 		9562BB961B49C8D3004F666B /* CyberPunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyberPunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9562BB9A1B49C8D3004F666B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9562BB9B1B49C8D3004F666B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -297,6 +300,8 @@
 			children = (
 				9562BC0C1B4F5E34004F666B /* ActionDPad.h */,
 				9562BC0D1B4F5E34004F666B /* ActionDPad.m */,
+				950640491B5192F90066AC5D /* ActionButton.h */,
+				9506404A1B5192F90066AC5D /* ActionButton.m */,
 			);
 			name = Controls;
 			sourceTree = "<group>";
@@ -423,6 +428,7 @@
 				9562BBA21B49C8D3004F666B /* GameScene.m in Sources */,
 				9562BBF61B4CB603004F666B /* SKTAudio.m in Sources */,
 				9562BB9C1B49C8D3004F666B /* main.m in Sources */,
+				9506404B1B5192F90066AC5D /* ActionButton.m in Sources */,
 				9562BBF31B4CB603004F666B /* SKAction+SKTExtras.m in Sources */,
 				9562BBF51B4CB603004F666B /* SKNode+SKTExtras.m in Sources */,
 				9562BC071B4CCB03004F666B /* ActionSprite.m in Sources */,
@@ -626,6 +632,7 @@
 				9562BBC01B49C8D3004F666B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9562BBC11B49C8D3004F666B /* Build configuration list for PBXNativeTarget "CyberPunchTests" */ = {
 			isa = XCConfigurationList;
@@ -634,6 +641,7 @@
 				9562BBC31B49C8D3004F666B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
