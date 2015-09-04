@@ -175,4 +175,33 @@
     }
 }
 
+-(void)jumpCutoff
+{
+    if (self.actionState == kActionStateJumpRise) {
+        if (self.jumpVelocity > kJumpCutoff) {
+            self.jumpVelocity = kJumpCutoff;
+        }
+    }
+}
+
+-(void)jumpFall
+{
+    if (self.actionState == kActionStateJumpRise ||
+        self.actionState == kActionStateJumpAttack) {
+        self.actionState = kActionStateJumpFall;
+        [self runAction: self.jumpFallAction];
+    }
+}
+
+-(void)jumpLand
+{
+    if (self.actionState == kActionStateJumpFall ||
+        self.actionState == kActionStateRecover) {
+        self.jumpHeight = 0;
+        self.jumpVelocity = 0;
+        self.actionState = kActionStateJumpLand;
+        [self runAction:self.jumpLandAction];
+    }
+}
+
 @end
