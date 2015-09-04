@@ -132,7 +132,47 @@
         [self removeAllActions];
         [self runAction:self.attackAction];
         self.actionState = kActionStateAttack;
-    } }
+    }
+}
 
+- (void)setGroundPosition:(CGPoint)groundPosition
+{
+    _groundPosition = groundPosition;
+    self.shadow.position =
+        CGPointMake(groundPosition.x,
+                    groundPosition.y - self.centerToBottom);
+}
+
+-(void)jumpRiseWithDirection:(CGPoint)direction
+{
+    if (self.actionState == kActionStateIdle) {
+        [self jumpRise];
+    }
+    else if (self.actionState == kActionStateWalk || self.actionState == kActionStateJumpLand) {
+        self.velocity = CGPointMake(direction.x * self.walkSpeed,
+                                    direction.y * self.walkSpeed);
+        [self flipSpriteForVelocity:self.velocity];
+        [self jumpRise];
+    }
+    else if (self.actionState == kActionStateRun) {
+        self.velocity = CGPointMake(direction.x * self.runSpeed,
+                                    direction.y * self.walkSpeed);
+        [self flipSpriteForVelocity:self.velocity];
+        [self jumpRise];
+    }
+}
+
+-(void)jumpRise
+{
+    if (self.actionState == kActionStateIdle ||
+        self.actionState == kActionStateWalk ||
+        self.actionState == kActionStateRun ||
+        self.actionState == kActionStateJumpLand) {
+        [self removeAllActions];
+        [self runAction: self.jumpRiseAction];
+        self.jumpVelocity = kJumpForce;
+        self.actionState = kActionStateJumpRise;
+    }
+}
 
 @end

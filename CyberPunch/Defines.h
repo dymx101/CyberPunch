@@ -19,6 +19,10 @@
 #define IS_IPAD() ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
 #define CURTIME CACurrentMediaTime()
 #define kPointFactor (IS_IPAD() ? 2.0 : 1.0)
+#define kGravity 1000.0 * kPointFactor 
+#define kJumpForce 340.0 * kPointFactor
+#define kJumpCutoff 130.0 * kPointFactor 
+#define kPlaneHeight 7.0 * kPointFactor
 
 typedef NS_ENUM(NSInteger, ActionState) {
     kActionStateNone = 0,
