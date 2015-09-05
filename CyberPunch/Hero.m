@@ -62,6 +62,20 @@
         self.centerToBottom = 39.0 * kPointFactor;
         self.centerToSides = 29.0 * kPointFactor;
         
+        self.shadow = [SKSpriteNode spriteNodeWithTexture:[[SKTTextureCache sharedInstance]textureNamed:@"shadow_character"]];
+        self.shadow.alpha = 0.75;
+        
+        //jump animation
+        NSArray *jumpRiseFrames = @[[[SKTTextureCache sharedInstance] textureNamed:@"hero_jump_05"],
+                                    [[SKTTextureCache sharedInstance] textureNamed:@"hero_jump_00"]];
+        self.jumpRiseAction = [SKAction animateWithTextures:jumpRiseFrames timePerFrame:1.0/12.0];
+        
+        //fall animation
+        self.jumpFallAction = [SKAction animateWithTextures:[self texturesWithPrefix:@"hero_jump" startFrameIdx:1 frameCount:4] timePerFrame:1.0/12.0];
+        
+        //land animation
+        self.jumpLandAction = [SKAction sequence:@[[SKAction setTexture:[[SKTTextureCache sharedInstance] textureNamed:@"hero_jump_05"]], [SKAction waitForDuration:1.0/12.0], [SKAction performSelector:@selector(idle) onTarget:self]]];
+        
     }
     
     return self;

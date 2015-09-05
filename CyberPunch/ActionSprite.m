@@ -100,7 +100,26 @@
     if (self.actionState == kActionStateWalk ||
         self.actionState == kActionStateRun) {
         CGPoint point = CGPointMultiplyScalar(self.velocity, delta);
-        self.desiredPosition = CGPointAdd(self.position, point);
+        self.desiredPosition = CGPointAdd(self.groundPosition, point);
+    } else if (self.actionState == kActionStateJumpRise) {
+        CGPoint point = CGPointMultiplyScalar(self.velocity, delta);
+        self.desiredPosition = CGPointAdd(self.groundPosition, point);
+        self.jumpVelocity -= kGravity * delta;
+        self.jumpHeight += self.jumpVelocity * delta;
+        
+        if (self.jumpVelocity <= kJumpForce/2) {
+            [self jumpFall];
+        }
+    } else if (self.actionState == kActionStateJumpFall) {
+        CGPoint point = CGPointMultiplyScalar(self.velocity, delta);
+        self.desiredPosition = CGPointAdd(self.groundPosition, point);
+        
+        self.jumpVelocity -= kGravity * delta;
+        self.jumpHeight += self.jumpVelocity * delta;
+        
+        if (self.jumpHeight <= 0) {
+            [self jumpLand];
+        }
     }
 }
 
@@ -203,5 +222,7 @@
         [self runAction:self.jumpLandAction];
     }
 }
+
+
 
 @end

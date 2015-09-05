@@ -37,7 +37,8 @@
     [self.hero setScale:kPointFactor];
     self.hero.position = CGPointMake(100 * kPointFactor,
                                      100 * kPointFactor);
-    
+    [self.hero.shadow setScale:kPointFactor];
+    [self addChild:self.hero.shadow];
     [self addChild:self.hero];
     [self.hero idle];
 }
@@ -83,10 +84,20 @@ isHoldingDirection:(ActionDPadDirection)direction
 
 #pragma mark - ActionButtonDelegate methods
 - (void)actionButtonWasPressed:(ActionButton *)actionButton {
-    if ([actionButton.name isEqualToString:@"ButtonA"]) { [self.hero attack];
-    } }
+    if ([actionButton.name isEqualToString:@"ButtonA"]) {
+        [self.hero attack];
+    } else if ([actionButton.name isEqualToString:@"ButtonB"]){
+        CGPoint directionVector = [self vectorForDirection: self.hud.dPad.direction];
+        [self.hero jumpRiseWithDirection: directionVector];
+    }
+}
+
 - (void)actionButtonIsHeld:(ActionButton *)actionButton{ }
-- (void)actionButtonWasReleased:(ActionButton *)actionButton{ }
+- (void)actionButtonWasReleased:(ActionButton *)actionButton{
+    if ([actionButton.name isEqualToString:@"ButtonB"]){
+        [self.hero jumpCutoff];
+    }
+}
 
 - (CGPoint)vectorForDirection:(ActionDPadDirection)direction
 {
@@ -153,7 +164,9 @@ isHoldingDirection:(ActionDPadDirection)direction
     
     CGFloat posY = MIN(floorHeight + (self.hero.centerToBottom - self.hero.feetCollisionRect.size.height), MAX(self.hero.centerToBottom, self.hero.desiredPosition.y));
     
-    self.hero.position = CGPointMake(posX, posY);
+    self.hero.groundPosition = CGPointMake(posX, posY);
+    self.hero.position = CGPointMake(self.hero.groundPosition.x,
+                                     self.hero.groundPosition.y + self.hero.jumpHeight);
 }
 - (void)setViewpointCenter:(CGPoint)position {
     
